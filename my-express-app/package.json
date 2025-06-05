@@ -4,6 +4,8 @@
   "main": "index.js",
   "module": "ES6",
   "scripts": {
+    "start": "nodes index.js",
+    "dev": "nodemn index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
