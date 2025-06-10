@@ -40,6 +40,22 @@ app.post("/users", (req, res) => {
   res.status(201).json(newUser);
 });
 
+//get
+app.get("/users", (req, res) => {
+  res.json(users);
+});
+// getting a single user
+app.get("/users/:id", (req, res) => {
+  const user = users.find((u) => u.id === Number(req.params.id));
+  res.json(users);
+});
+
+//update
+app.put("/users/:id", (req, res) => {
+  const user = user.find((u) => u.id === Number(req.params.id));
+  user.name = req.body.name;
+  res.json(user);
+});
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
 });
