@@ -31,7 +31,14 @@ app.get("/search", (req, res) => {
 });
 
 //CRUD create,update,delete
-// rest api
+let users = [{ id: 1, name: "Faith" }];
+//create
+app.post("/users", (req, res) => {
+  const newUser = { id: User.length + 1, name: req.body.name };
+
+  user.push(newUser);
+  res.status(201).json(newUser);
+});
 
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
