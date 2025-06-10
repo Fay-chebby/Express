@@ -31,6 +31,7 @@ app.get("/search", (req, res) => {
 });
 
 //CRUD create,update,delete
+// rest api
 
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
