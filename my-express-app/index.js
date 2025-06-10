@@ -19,9 +19,14 @@ app.get("/about", (req, res) => {
 app.post("/contact", (req, res) => {
   res.send("Contact page");
 });
-
+// Route params
 app.get("/user/:id", (req, res) => {
   res.send("User ID: ${req.params.id}");
+});
+
+//Query params
+app.get("/search", (req, res) => {
+  res.send("Search query: ${req.query.q}");
 });
 
 app.listen(PORT, () => {
