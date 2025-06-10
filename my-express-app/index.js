@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const PORT = 3000;
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Hello world , how are you today");
@@ -28,6 +29,8 @@ app.get("/user/:id", (req, res) => {
 app.get("/search", (req, res) => {
   res.send("Search query: ${req.query.q}");
 });
+
+//CRUD create,update,delete
 
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
