@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send("Hello world , how are you today");
 });
 
-app.use((req, res, next) => {
+app.use((req, res, next, err) => {
   console.log("${req.method} ${req.url");
   next();
 });
@@ -56,6 +56,12 @@ app.put("/users/:id", (req, res) => {
   user.name = req.body.name;
   res.json(user);
 });
+// delete
+app.delete("/users/:id", (req, res) => {
+  user = user.filter((u) => u.id != req.params.id);
+  res.status(204).send();
+});
+
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
 });
