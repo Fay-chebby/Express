@@ -12,7 +12,7 @@ router.post("/task", async (req, res) => {
     res.status(400).send(error);
   }
 });
-// getting data
+// getta
 router.get("/task", async (req, res) => {
   try {
     const task = await Task.find();
