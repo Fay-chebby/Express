@@ -50,7 +50,7 @@
 //   res.json(users);
 // });
 
-// //update
+// //update user
 // app.put("/users/:id", (req, res) => {
 //   const user = user.find((u) => u.id === Number(req.params.id));
 //   user.name = req.body.name;
